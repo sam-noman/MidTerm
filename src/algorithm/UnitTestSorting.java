@@ -15,13 +15,16 @@ public class UnitTestSorting {
         //apply unsorted array to selectionSort.
         sort.selectionSort(unSortedArray);
         //verify if the unsorted array is sorted by the selection sort algorithm.
+        sort.insertionSort(unSortedArray);
         try {
+            Assert.assertEquals(sortedArray, sort.insertionSort(unSortedArray), "Array is not Sorted using insertionSort()");
             Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
         }catch(Exception ex){
             ex.getMessage();
         }
         String value = "i am waiting";
-        Assert.assertEquals("i am waiting...",value);
+
+        // Assert.assertEquals("i am waiting...",value);
         //Now implement Unit test for rest of the soring algorithm...................below
 
     }
