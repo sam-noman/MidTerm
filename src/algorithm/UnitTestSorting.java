@@ -17,8 +17,9 @@ public class UnitTestSorting {
         //verify if the unsorted array is sorted by the selection sort algorithm.
         sort.insertionSort(unSortedArray);
         try {
-            Assert.assertEquals(sortedArray, sort.insertionSort(unSortedArray), "Array is not Sorted using insertionSort()");
             Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+            Assert.assertEquals(sortedArray, sort.insertionSort(unSortedArray), "Array is not Sorted using insertionSort()");
+            Assert.assertEquals(sortedArray, sort.bubbleSort(unSortedArray), "Array is not Sorted using bubbleSort()");
         }catch(Exception ex){
             ex.getMessage();
         }
