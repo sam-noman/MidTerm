@@ -20,8 +20,10 @@ public class EmployeeInfo {
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	static String companyName;
-	
+	static String name;
+	static int employeeId;
+	static String assignDepartment;
+
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -32,13 +34,18 @@ public class EmployeeInfo {
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
+
+	public EmployeeInfo() {
+	}
+
 	public EmployeeInfo(int employeeId){
-		
+		this.employeeId = employeeId;
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+		this.name = name;
+		this.employeeId = employeeId;
 	}
-	
+
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -137,5 +144,30 @@ public class EmployeeInfo {
 			return date;
 
 		}
+	}
+
+
+	public static String getName() {
+		return name;
+	}
+
+	public static void setName(String name) {
+		EmployeeInfo.name = name;
+	}
+
+	public static int getEmployeeId() {
+		return employeeId;
+	}
+
+	public static void setEmployeeId(int employeeId) {
+		EmployeeInfo.employeeId = employeeId;
+	}
+
+	public static String getAssignDepartment() {
+		return assignDepartment;
+	}
+
+	public static void setAssignDepartment(String assignDepartment) {
+		EmployeeInfo.assignDepartment = assignDepartment;
 	}
 }
